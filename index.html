@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE BEAN KOREA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght
+@400;500;600;700&family=Dongle:wght@300;400;700&family=Hind+Siliguri:wght@300;400;500;600;700&family=
+Inter:wght@100;200;300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=
+Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&family=Nanum+Gothic:wght
+@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quicksand:wght@300;400;500;600;700&family=Rubik:ital,wght
+@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,900;1,800;1,900&family=
+Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Dongle:wght@300;400;700&family=F
+redoka:wght@300;400;500;600&family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=
+Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;
+1,100;1,200;1,300;1,400;1,500;1,600&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quicksand:wght
+@300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,3
+00;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,900;1,800;1,900&family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=
+Dongle:wght@300;400;700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@
+100;200;300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family
+=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&family
+=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quicksand:wght@300;400;500;600;700&family
+=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,900;1,800;1,900&family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+     $(document).ready(function(){
+         $(window).scroll(function(){
+             if(sc >= 200){
+                 $('#top_bt').css({'position':'absolute'})
+             }
+             else if(sc <200){
+                $('top_bt').css({'position':'fixed'})
+             }
+         })
+         
+         $('#top_bt').click(function(){
+             $('body,html').animate({'scrollTop':'0'},500)
+         })
+        $('#new_btbox>ul>li:nth-child(1)').click(function(){
+            $('#new_btbox>ul>li:nth-child(1)>img').attr({'src':'icons/paging_on.png'})
+            $('#new_btbox>ul>li:nth-child(2)>img').attr({'src':'icons/paging_on_popup.png'})
+            $('#new_btbox>ul>li:nth-child(3)>img').attr({'src':'icons/paging_on_popup.png'})
+            $('#new_product').animate({'left':'0'},1000)
+        })
+        $('#new_btbox>ul>li:nth-child(2)').click(function(){
+            $('#new_btbox>ul>li:nth-child(2)>img').attr({'src':'icons/paging_on.png'})
+            $('#new_btbox>ul>li:nth-child(1)>img').attr({'src':'icons/paging_on_popup.png'})
+            $('#new_btbox>ul>li:nth-child(3)>img').attr({'src':'icons/paging_on_popup.png'})
+            $('#new_product').animate({'left':'-1200px'},1000)
+        })
+        $('#new_btbox>ul>li:nth-child(3)').click(function(){
+            $('#new_btbox>ul>li:nth-child(3)>img').attr({'src':'icons/paging_on.png'})
+            $('#new_btbox>ul>li:nth-child(2)>img').attr({'src':'icons/paging_on_popup.png'})
+            $('#new_btbox>ul>li:nth-child(1)>img').attr({'src':'icons/paging_on_popup.png'})
+            $('#new_product').animate({'left':'-2400px'},1000)
+        })
+        $('#md_pick_bt>ul>li:nth-child(1)').click(function(){
+            $(this).css({'background-color':'#ff9900'}).siblings().css({'background-color':'#ddd'})
+            $('#md_pick_slide').animate({'left':'0'},1000)
+        })
+        $('#md_pick_bt>ul>li:nth-child(2)').click(function(){
+            $(this).css({'background-color':'#ff9900'}).siblings().css({'background-color':'#ddd'})
+            $('#md_pick_slide').animate({'left':'-300px'},1000)
+        })
+        $('#md_pick_slide>li:nth-child(1)').mouseenter(function(){
+            $('#md_pick_slide>li:nth-child(1)>button').css({'display':'inline'})
+            
+        })
+        $('#md_pick_slide>li:nth-child(1)').mouseleave(function(){
+            $('#md_pick_slide>li:nth-child(1)>button').css({'display':'none'})
+            
+        })
+        $('#md_pick_slide>li:nth-child(2)').mouseenter(function(){
+            $('#md_pick_slide>li:nth-child(2)>button').css({'display':'inline'})
+            
+        })
+        $('#md_pick_slide>li:nth-child(2)').mouseleave(function(){
+            $('#md_pick_slide>li:nth-child(2)>button').css({'display':'none'})
+            
+        })
+        $('#md_pick_slide>li:nth-child(3)').mouseenter(function(){
+            $('#md_pick_slide>li:nth-child(3)>button').css({'display':'inline'})
+            
+        })
+        $('#md_pick_slide>li:nth-child(3)').mouseleave(function(){
+            $('#md_pick_slide>li:nth-child(3)>button').css({'display':'none'})
+            
+        })
+        $('#md_pick_slide>li:nth-child(4)').mouseenter(function(){
+            $('#md_pick_slide>li:nth-child(4)>button').css({'display':'inline'})
+            
+        })
+        $('#md_pick_slide>li:nth-child(4)').mouseleave(function(){
+            $('#md_pick_slide>li:nth-child(4)>button').css({'display':'none'})
+            
+        })
+        $('#md_pick_slide>li:nth-child(5)').mouseenter(function(){
+            $('#md_pick_slide>li:nth-child(5)>button').css({'display':'inline'})
+            
+        })
+        $('#md_pick_slide>li:nth-child(5)').mouseleave(function(){
+            $('#md_pick_slide>li:nth-child(5)>button').css({'display':'none'})
+            
+        })
+        
+     })
+    </script>
+    <style>
+        @font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        * {margin: 0; padding: 0; list-style: none;}
+        body { }
+        header { width: 100%; height: 140px; position: fixed; z-index: 99999; background-color: #fff; overflow: hidden; left: 0; top: 0; border-bottom: 1px solid #ddd;}
+        #header1 { width: 100%;height: 40px; background-color: #eee; }
+        #header1_box {width: 1210px; height: 40px;   margin: auto;}
+        #header1_menu { float: right; }
+        #header1_menu>li {  line-height: 40px; margin-left: 20px; float: left;  font-size: 13px; letter-spacing: -1px;}
+        #header1_menu>li:last-child { text-align: center; width: 60px; height: 40px; background-color: #2e1c10; }
+        #header1_menu>li:last-child>img {margin-top: 8px;}
+        #header1_menu>li:first-child { border-right: 1px solid #ccc; padding-right: 20px;}
+        #header2 { width: 100%; height: 100px;   }
+        #header2_box { width: 1210px; height: 100px;   margin: auto;}
+        #logo { float: left; margin-top: 15px; }
+        #search { float: right; margin-top: 40px; }
+        #header2_box>ul>li { display: inline-block; line-height: 100px; margin:0 30px; font-size: 15px; font-family: 'Fredoka', sans-serif; font-weight: 600; letter-spacing: 1px; position: relative;}
+        #header2_box>ul>li:hover {color: #d2661a;}
+        #header2_box>ul {text-align: center;}
+        .sub { position: absolute; padding: 40px; background-color: #eee;  line-height: 25px; color: #999;}
+        #header2_box>ul>li>.sub>div { float: left; margin-right: 60px; background-color: yellow;}
+        #header2_box>ul>li:nth-child(1)>.sub>div { width: 160px; height: 150px; margin-bottom: 30px; }
+        #header2_box>ul>li>.sub>div>h3 { }
+        #header2_box>ul>li>.sub>div>ul { }
+        #header2_box>ul>li>.sub>div>ul>li { }
+        #header2_box>ul>li:nth-child(1)>.sub { width: 1210px; top: 100px; left: -300px; text-align: left;  background-color: #666;   }
+        #header2_box>ul>li:nth-child(2)>.sub { width: 500px; top: 100px; left: -100px; text-align: left;}
+        #header2_box>ul>li:nth-child(3)>.sub { width: 820px; top: 100px; left: -100px; text-align: left;}
+        #header2_box>ul>li:nth-child(4)>.sub { width: 100px; top: 100px; left: -30px; text-align: left; }
+        #header2_box>ul>li:nth-child(5)>.sub { width: 1060px; top: 100px; left: -100px; text-align: left;}
+        #header2_box>ul>li:nth-child(6)>.sub { width: 100px; top: 100px; left: -30px; text-align: left;  }
+        #main_banner1 {width: 100%; height: 540px;background: url('images/main1.jpg') center top no-repeat; margin-top: 140px;}
+        #md_pick { width: 1200px; height: 650px;  margin: auto; margin-top: 50px; text-align: center; position: relative; overflow: hidden;}
+        #md_pick>h3 { font-size: 25px; line-height: 100px;color: #d2661a;font-family: 'Roboto Slab', serif; font-weight: 400;} 
+        #md_pick_slide { width: 1500px; height: 450px; position: absolute; }
+        #md_pick_slide>li>h4 { margin-top: 30px; font-size: 18px; color: #333;font-family: 'Cafe24SsurroundAir'; }
+        #md_pick_slide>li>h5 { margin-top: 15px; color: #cf661a; font-size: 15px; font-weight: 400;}
+        #md_pick_slide>li>h6 { margin-top: 14px; font-size: 14px; font-weight: 400;}
+        #md_pick_slide>li { width: 300px; height: 450px; float: left; position: relative;}
+        #md_pick_slide>li>img:hover { opacity: 0.8; transition: 0.3s;}
+        #md_pick_slide>li>button { width: 200px; height: 40px; color: #fff; border: none; position: absolute; left: 0;bottom: 0;top: 0; right: 0;margin: auto; background-color: #f38200; font-family: 'Roboto Slab', serif; font-weight: 400; display: none;}
+        #md_pick_bt {width: 150px; height: 30px; line-height: 30px; margin: auto; margin-top: 470px;}
+        #md_pick_bt>img { margin-right: 20px; cursor: pointer;}
+        #md_pick_bt>ul { display: inline-block; vertical-align: middle;}
+        #md_pick_bt>ul>li {width: 15px; height: 15px; border-radius: 25px; display: inline-block; background-color: #ddd; margin-right: 5px; cursor: pointer;}
+        #md_pick_bt>ul>li:nth-child(1) {background-color: #ff9900; }
+        #new { width: 1200px; height: 650px;  margin: 50px auto 0; background-color: #fff; position: relative; overflow: hidden;}
+        #new>h3 {text-align: center; font-size: 22px; color: #d9631a;font-family: 'Roboto Slab', serif; font-weight: 400;}
+        #new_product>li>h4 { color: #d9631a; margin-top: 20px; font-family: 'Roboto Slab', serif;font-size: 16px; font-weight: 400;}
+        #new_product {width: 3600px; margin-top: 40px; text-align: center; overflow: hidden; position: absolute;}
+        #new_product>li {width: 380px; float: left;}
+        #new_product>li:nth-child(2) {margin-left: 30px; margin-right: 30px;}
+        #new_product>li:nth-child(5) {margin-left: 30px; margin-right: 30px;}
+        #new_product>li:nth-child(8) {margin-left: 30px; margin-right: 30px;}
+        #new_pausebt { margin-right: 10px; cursor: pointer;}
+        #new_btbox { width: 150px; height: 30px; margin: auto; margin-top: 600px; text-align: center;}
+        #new_btbox>ul { display: inline-block;}
+        #new_btbox>ul>li { display: inline-block; margin-right: 5px; cursor: pointer;}
+        #sns { width: 100%; height: 590px; background-color: #7c51a1; margin-top: 50px; text-align: center;}
+        #sns>h3 {color: #fff; text-align: center; font-size: 23px; line-height: 80px; font-weight: 500;}
+        #sns>ul { width: 1200px; height: 400px;  margin:0 auto;}
+        #sns>ul>li {width: 200px; height: 200px; float: left ;}
+        #sns>ul>li>img {width: 100%; }
+        #sns>button { width: 400px; height: 40px; color: #fff; font-size: 14px; background-color: #f38200; border: none; margin-top: 30px;  font-family: 'Roboto Slab', serif;}
+        footer { width: 100%; height: 475px; background-color: #e2e2e2; position: relative;}
+        #footer1 { width: 1200px;  height: 310px;  margin: auto;}
+        #footer1>ul { width: 1200px;}
+        #footer1>ul>li { width: 200px; height: 310px; float: left; border-bottom: 1px solid #4b2616;}
+        #footer1>ul>li>h3 { margin-top: 53px;  font-family: 'Roboto Slab', serif;  color: #d9631a; font-weight: 500; font-size: 17px;}
+        #footer1>ul>li>p {margin-top: 13px; font-size: 13px; line-height: 27px; font-family: 'Nanum Gothic', sans-serif; color: #4b2616; font-weight: 500;}
+        #footer1>ul>li>p>span { font-weight: 800;}
+        #footer2 { width: 1200px; margin: auto;}
+        #footer2_left { width: 800px; float: left;}
+        #footer2_left>h6 { font-weight: 400; color: #4b2616; margin-top: 30px; font-size: 13px;}
+        #footer2_left>h6>span {color: #d9631a; }
+        #footer2_left>p {margin-top: 20px; font-size: 13px;  color: #4b2616; line-height: 22px;}
+        #footer2_right { width: 400px; float: right; }
+        #footer2_right>ul { float: right;}
+        #footer2_right>ul>li { float: left; margin-left: 13px; margin-top: 37px;}
+        #top_bt { position: fixed; bottom: 60px; right: 30px;}
+        #top_bt>img { cursor: pointer;}
+        #sc {font-size: 100px; position: fixed; background-color: red;color: #fff; left: 0; top: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header1">
+            <div id="header1_box">
+                <ul id="header1_menu">
+                    <li>로그인</li>
+                    <li>매장찾기</li>
+                    <li>채용정보</li>
+                    <li>단체 및 기업구매</li>
+                    <li>고객서비스</li>
+                    <li><img src="icons/ico_user_info_line.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div id="header2">
+            <div id="header2_box">
+                <h1 id="logo"><img src="logo.png" alt=""></h1>
+                <img src="icons/ico_search.png" alt="" id="search">
+                <ul>
+                    <li>BUY ONLINE
+                        <div class="sub">
+                            <div id="sub1_box1">
+                                <h3>View All</h3></div>
+                        <div id="sub1_box2">
+                        <h3>분쇄형 커피</h3>
+                        <ul>
+                            <li>드립백</li>
+                            <li>소풍커피</li>
+                        </ul></div>
+                        <div id="sub1_box3"><h3>파우치 커피</h3>
+                        <ul>
+                            <li>♥NEW♥파우치 커피</li>
+                        </ul></div>
+                        <div id="sub1_box4"><h3>캡슐 커피</h3>
+                        <ul>
+                            <li>♥NEW♥네스프레소 호환용</li>
+                            <li>CBTL 호환용</li>
+                        </ul></div>
+                        <div id="sub1_box5"><h3>원두</h3>
+                        <ul>
+                            <li>원두 가이드</li>
+                            <li>MD's Pick</li>
+                            <li>라이트 로스트</li>
+                            <li>미디엄 로스트</li>
+                            <li>다크 로스트</li>
+                        </ul></div>
+                        <div id="sub1_box6"><h3>티</h3>
+                        <ul>
+                            <li>티 가이드</li>
+                            <li>클래식티</li>
+                            <li>허브티</li>
+                            <li>프룻티</li>
+                        </ul></div>
+                        <div id="sub1_box7"><h3>상품</h3>
+                        <ul>
+                            <li>스틱커피</li>
+                            <li>아이스 텀블러</li>
+                            <li>보온 텀블러</li>
+                            <li>머그</li>
+                            <li>파우더</li>
+                            <li>푸드</li>
+                            <li>기타상품</li>
+                        </ul></div>
+                        <div id="sub1_box8"><h3>CBTL시스템</h3>
+                        <ul>
+                            <li>CBTL 머신</li>
+                            <li>액세서리</li>
+                        </ul></div>
+                        </div>
+                    </li>
+                    <li>MEMBER'S CLUB</li>
+                    <li>MENU</li>
+                    <li>STORE</li>
+                    <li>THE COFFEE BEAN</li>
+                    <li>CBTL</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- main banner 시작 -->
+    <div id="main_banner1"></div>
+    <div id="md_pick">
+        <h3>MD'S PICK</h3>
+        <ul id="md_pick_slide">
+            <li>
+                <img src="images (1)/md1-1.jpg" alt="">
+                <h4>미르텀블러(화이트) 16oz</h4>
+                <h5>35,000원</h5>
+                <button>QUICKVIEW</button>
+            </li>
+            <li>
+                <img src="images (1)/md1-2.jpg" alt="">
+                <h4>미르텀블러(다크그레이) 16oz</h4>
+                <h5>35,000원</h5>
+                <button>QUICKVIEW</button>
+            </li>
+            <li>
+                <img src="images (1)/md1-3.jpg" alt="">
+                <h4>미르텀블러 32oz (그레이) </h4>
+                <h5>54,000원</h5>
+                <button>QUICKVIEW</button>
+            </li>
+            <li>
+                <img src="images (1)/md1-4.jpg" alt="">
+                <h4>커피빈 잉글리쉬 브렉퍼스트라떼 파우치(10개입)</h4>
+                <h6>♥신제품출시♥</h6>
+                <h5>15,000</h5>
+                <button>QUICKVIEW</button>
+            </li>
+            <li>
+                <img src="images (1)/md1-5.jpg" alt="">
+                <h4>커피빈 바닐라 라떼 파우치(10개입)</h4>
+                <h6>♥신제품출시♥</h6>
+                <h5>15,000</h5>
+                <button>QUICKVIEW</button>
+            </li>
+        </ul>
+        <div id="md_pick_bt">
+            <img src="icons/btn_pause.png" alt="" id="md_pick_pause">
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="new">
+        <h3>What's new</h3>
+        <ul id="new_product">
+            <li>
+                <img src="images/new1.jpg" alt="">
+                <h4>2021 12 White Strawberry Red Velvet</h4>
+            </li>
+            <li>
+                <img src="images/new2.jpg" alt="">
+                <h4>2021 12 Red Gloves Macaron</h4>
+            </li>
+            <li>
+                <img src="images/new3.jpg" alt="">
+                <h4>2021 12 Limited Edition</h4>
+            </li>
+            <li>
+                <img src="images/PC_B_747.jpg" alt="">
+                <h4>2022 01 Pet Shoes</h4>
+            </li>
+            <li>
+                <img src="images/PC_B_321.jpg" alt="">
+                <h4>2022 01 Mexica Grilled-Bulgogl Burrito</h4>
+            </li>
+            <li>
+                <img src="images/PC_B_301.jpg" alt="">
+                <h4>2022 02 Pet Bottle</h4>
+            </li>
+            <li>
+                <img src="images/PC_B_294.jpg" alt="">
+                <h4>2022 02 White Strawberry Red Velvet</h4>
+            </li>
+            <li>
+                <img src="images/PC_B_291.jpg" alt="">
+                <h4>2022 02 Red Gloves Macaron</h4>
+            </li>
+            <li>
+                <img src="images/PC_B_299.jpg" alt="">
+                <h4>2022 02 Limited Edition</h4>
+            </li>
+        </ul>
+        <div id="new_btbox">
+            <img src="icons/btn_pause.png" alt="" id="new_pausebt">
+            <ul>
+                <li><img src="icons/paging_on.png" alt=""></li>
+                <li><img src="icons/paging_on_popup.png" alt=""></li>
+                <li><img src="icons/paging_on_popup.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <!-- sns 시작 -->
+    <div id="sns">
+        <h3>#커피빈코리아 #커피빈맛있다 #커피빈사랑해</h3>
+        <ul>
+            <li><img src="images/img1.jpg" alt=""></li>
+            <li><img src="images/img2.jpg" alt=""></li>
+            <li><img src="images/img3.jpg" alt=""></li>
+            <li><img src="images/img4.jpg" alt=""></li>
+            <li><img src="images/img5.jpg" alt=""></li>
+            <li><img src="images/img6.jpg" alt=""></li>
+            <li></li>
+            <li><img src="images/img7.jpg" alt=""></li>
+            <li><img src="images/img8.jpg" alt=""></li>
+            <li><img src="images/img9.jpg" alt=""></li>
+            <li><img src="images/img10.jpg" alt=""></li>
+            <li><img src="images/img11.jpg" alt=""></li>
+        </ul>
+        <button>OUR INSTAGRAM - @COFFEEBEAN_KR</button>
+    </div>
+    <footer>
+        <div id="top_bt"><img src="icons/btn_top.png" alt=""></div>
+        <div id="footer1">
+            <ul>
+                <li><h3>Buy Online</h3>
+                <p>VIEW ALL <br>
+                    커피<br>
+                    티<br>
+                    CBTL 시스템<br>
+                    상품</p></li>
+                <li><h3>Member`s Club</h3>
+                    <p>커피빈 멤버스 클럽 <br>
+                        나의 커피빈</p></li>
+                <li><h3>Menu</h3>
+                <p>음료 <br>
+                    푸드<br>
+                    상품<br>
+                    카드</p></li>
+                <li><h3>Store</h3>
+                <p>매장 찾기<br>
+                    신규매장
+                </p></li>
+                <li><h3>The Coffee Bean</h3>
+                <p>커피빈 코리아 <br>
+                    커피빈 소식 <br>
+                    사회공헌 <br>
+                    <span>제휴 마케팅 제안</span> <br>
+                    채용안내 <br>
+                    신규 입점 제의 <br>
+                    결산공고</p></li>
+                <li><h3>CBTL</h3> 
+                <p>CBTL 가이드 <br>
+                    CBTL 서비스<br>
+                    AS 안내<br>
+                    AS 신청<br>
+                    CBTL FAQ<br>
+                    제품설명서</p></li>
+            </ul>
+        </div>
+        <div id="footer2">
+            <div id="footer2_left">
+                <h6>홈페이지 이용약관ㅣ<span>개인정보처리방침</span>ㅣ영상정보처리기기운영방침ㅣ멤버스카드이용약관ㅣ위치기반서비스 이용약관</h6>
+                <p>(주)커피빈코리아 대표이사 감종철 ㅣ 사업자등록번호 120-86-07029 ㅣ 통신판매업신고 제 2010-서울강남-00560 <br>
+                    서울시 강남구 봉은사로 99길 7 ㅣ 고객센터 02-1577-4708 (09:00 - 18:00) ㅣE-mail : cbk@coffeebeankorea.com <br>
+                    ⓒ 2021. The Coffee Bean. All rights reserved.</p>
+            </div>
+            <div id="footer2_right">
+                <ul>
+                    <li><img src="icons/ico_facebook.png" alt=""></li>
+                    <li><img src="icons/ico_instagram.png" alt=""></li>
+                    <li><img src="icons/ico_blog.png" alt=""></li>
+                    <li><img src="icons/ico_twitter.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <h1 id="sc">0</h1>
+</body>
+</html>
